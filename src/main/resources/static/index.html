@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+</head>
+<body>
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="index.html">Kino</a>
+        </div>
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="index.html">Hjem</a></li>
+            <li><a href="billetter.html">Alle billetter</a></li>
+        </ul>
+    </div>
+</nav>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <h3>Kino</h3>
+            <form class="form">
+                <div class="form-group">
+                    <label for="film">Velg film: </label>
+                    <select id="film" name="film" class="form-control">
+                        <option></option>
+                        <option>Jaws</option>
+                        <option>UP</option>
+                        <option>Dune</option>
+                        <option>Wonka</option>
+                        <option>Batman Begins</option>
+                    </select><p class="has-error" id="filmError" style="color: red"></p>
+
+                    <label for="antall">Antall: </label>
+                    <input type="text" class="form-control" id="antall" name="antall"> <p class="has-error" id="antallError" style="color: red"></p>
+
+                    <label for="fornavn">Fornavn: </label>
+                    <input type="text" class="form-control" id="fornavn" name="fornavn"><p class="has-error" id="fornavnError" style="color: red"></p>
+
+                    <label for="etternavn">Etternavn: </label>
+                    <input type="text" class="form-control" id="etternavn" name="etternavn"><p class="has-error" id="etternavnError" style="color: red"></p>
+
+                    <label for="telefon">Telefonnr: </label>
+                    <input type="text" class="form-control" id="telefon" name="telefon"><p class="has-error" id="telefonError" style="color: red"></p>
+
+                    <label for="epost">Epost: </label>
+                    <input type="text" class="form-control" id="epost" name="epost"><p class="has-error" id="epostError" style="color: red"></p>
+                </div>
+            </form>
+            <button class="btn btn-primary" id="kjop">Registrer</button>
+        </div>
+    </div>
+</div>
+
+<footer class="center-footer" style="margin-top: 200px">
+    <div class="text-info">
+        Kino program <br>
+        Hele prosjektet er ute på github <br>
+        Bendik Enger <br>
+    </div>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="appScript.js" type="application/javascript"></script>
+</body>
+</html>

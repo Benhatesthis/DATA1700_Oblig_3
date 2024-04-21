@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+</head>
+<body>
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="index.html">Kino</a>
+        </div>
+        <ul class="nav navbar-nav">
+            <li><a href="index.html">Hjem</a></li>
+            <li class="active"><a href="billetter.html">Alle billetter</a></li>
+        </ul>
+    </div>
+</nav>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-2">
+            <div class="col-lg-4">
+                <h3>Alle billettene:</h3>
+                <button style="margin-bottom: 10px" class="btn btn-primary" onclick="hentAlle()">Hent billetter</button>
+                <br>
+                <div id="ut"></div> <button class="btn btn-danger" id="slett">Slett alle billetter</button>
+                <div style=" width:400px; text-align: center; display: none;" id="minDiv">
+                    <br>
+                    <h2 class="title"> Oppdater billett </h2>
+                    <p style="font-weight: bolder">ID:</p><p id="billettNr"></p>
+                    <label for="filmEdit">Film navn</label><br>
+                    <select id="filmEdit" name="filmEdit" class="form-control">
+                        <option>Pirates of the Caribbean</option>
+                        <option>Cars 4</option>
+                        <option>Det regner kjøttboller</option>
+                        <option>Titanic</option>
+                    </select>
+                    <label for="antallEdit">Antall</label><br>
+                    <input class="form-control" type="text" id="antallEdit"><br>
+                    <label for="fornavnEdit">Fornavn</label><br>
+                    <input class="form-control" type="text" id="fornavnEdit"><br>
+                    <label for="etternavnEdit">Etternavn</label><br>
+                    <input class="form-control" type="text" id="etternavnEdit"><br>
+                    <label for="telefonEdit">Telefon</label><br>
+                    <input class="form-control" type="text" id="telefonEdit"><br>
+                    <label for="epostEdit">Epost</label><br>
+                    <input class="form-control" type="text" id="epostEdit"><br>
+                    <br>
+                    <button class="btn btn-primary" id="oppdater" onclick="oppdaterBillettiDB()">Oppdater</button>
+                    <br>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="modal-footer" style="margin-top: 200px">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 text-center text-info">
+                Kino program <br>
+                Hele prosjektet er ute på github <br>
+                Bendik Enger <br>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="billetter.js" type="application/javascript"></script>
+</body>
+</html>

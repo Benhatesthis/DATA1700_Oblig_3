@@ -1,0 +1,38 @@
+package oslomet.data1700_oblig_3;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
+
+@RestController
+public class BillettController {
+    @Autowired
+    private BillettRepository repo;
+
+    @PostMapping("/lagre")
+    public void lagre(Billett billett){
+        repo.lagreBillett(billett);
+    }
+    @GetMapping("/hentAlle")
+    public List<Billett> hentAlle(){
+        return repo.hentAlle();
+    }
+    @GetMapping("/slettAlle")
+    public void slettAlle(){
+        repo.slettAlle();
+    }
+
+    @DeleteMapping("/slettBillett")
+    public void slettBillett(@RequestParam Long billettNr){
+        repo.slettBillett(billettNr);
+    }
+    @GetMapping("/hentBilletterFraDB")
+    public Billett hentBilletterFraDB(@RequestParam Long billettNr){return repo.findById(billettNr);}
+
+    @PostMapping("/oppdaterBillettiDB")
+    public String oppdaterBillettiDB(Billett billett){
+        repo.oppdaterBillettiDB(billett);
+        return "Oppdatert";
+    }
+}
